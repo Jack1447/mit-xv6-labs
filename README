@@ -1,3 +1,48 @@
+# Jack1447's xv6 Operating System Labs
+
+本仓库基于 [MIT xv6-riscv](https://github.com/mit-pdos/xv6-riscv) 操作系统，用于操作系统课程实验与学习。
+
+## 🧠 项目目的
+
+通过阅读和修改 xv6 操作系统源码，完成多个操作系统实验，深入理解内核原理、系统调用、用户态程序、内存管理等核心概念。
+
+## 📁 项目结构
+
+- `kernel/`：xv6 的内核源代码
+- `user/`：用户态程序，包括新增的实验代码
+- `Makefile`：构建系统入口
+- `README.md`：本说明文件（你正在看）
+- 其他：MIT xv6 提供的实验框架内容
+
+## 🌿 分支说明
+
+| 分支名 | 内容 |
+|--------|------|
+| `main` | 原始 xv6 框架（可选，保留基础版本） |
+| `util` | 用户态 pingpong 实验（练习进程通信） |
+| `syscall` | 自定义系统调用实验（待开发） |
+| `lazyalloc` | 虚拟内存实验（待开发） |
+
+## 🏁 实验示例：util 分支
+
+`util` 分支中实现了 `pingpong.c` 用户程序，使用两个 pipe 在父子进程间传递字节，实现 ping-pong 通信。
+
+运行效果如下：
+
+```bash
+$ pingpong
+4: received ping
+3: received pong
+
+
+
+
+
+
+
+
+
+## 原README如下
 xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
 Version 6 (v6).  xv6 loosely follows the structure and style of v6,
 but is implemented for a modern RISC-V multiprocessor using ANSI C.
