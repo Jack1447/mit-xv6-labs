@@ -1,13 +1,13 @@
 // user/pingpong.c
-#include "kernel/types.h"
-#include "user/user.h"
+#include "kernel/types.h"  // 定义了xv6内核使用的基本数据类型
+#include "user/user.h"  // 定义了用户程序可以使用的系统调用和函数
 
 int main() {
-  int pipe1[2]; // parent -> child
+  int pipe1[2]; // parent -> child  0通常为读端，1通常为写端
   int pipe2[2]; // child -> parent
   char buf[1];
 
-  pipe(pipe1);
+  pipe(pipe1); // 管道的创建
   pipe(pipe2);
 
   int pid = fork();
